@@ -3,15 +3,13 @@ from fastapi.security import HTTPBearer
 from fastapi.responses import HTMLResponse, JSONResponse
 from pydantic import BaseModel, Field
 from typing import Optional,List
-from config.base_de_datos import sesion, motor, base
-from modelos.ventas import Ventas as VentasModelo
+
 from jwt_config import dame_token,valida_token
 
 # crea instancia de fastapi
 app = FastAPI()
 app.title = 'Aplicacion de ventas'
 app.version = '1.0.1'
-base.metadata.create_all(bind=motor)
 ventas = [
     {
         "id": 1,

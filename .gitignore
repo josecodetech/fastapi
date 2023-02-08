@@ -4,7 +4,6 @@ temp/
 pass.*
 clave.txt
 *.exe
-/config
 /videos
 /imagenes
 /cheet_python
